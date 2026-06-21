@@ -25,7 +25,7 @@ Desde otro paquete Swift, en su `Package.swift` (la ruta es relativa a ese manif
 
 ```swift
 dependencies: [
-    .package(path: "ruta/a/FeatureFlagsKitPackage")
+    .package(path: ".../smadex-challenge/FeatureFlagsKitPackage")
 ],
 targets: [
     .target(
