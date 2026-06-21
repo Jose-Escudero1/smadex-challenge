@@ -36,7 +36,7 @@ El resultado se deja en `build/FeatureFlagsKit.xcframework` e incluye las versio
 
 ### Como paquete de Swift (SPM)
 
-En la carpeta `FeatureFlagsKitPackage` hay una versión del SDK lista para Swift Package Manager. Se compila y se prueba con:
+En la carpeta `FeatureFlagsKitPackage` hay una versión del SDK lista para Swift Package Manager. Se compila y se prueba desde esa carpeta con:
 
 ```
 cd FeatureFlagsKitPackage
@@ -44,14 +44,23 @@ swift build
 swift test
 ```
 
-Para usarla desde otra aplicación se añade como dependencia, ya sea desde un repositorio remoto o desde una ruta local:
+Como el `Package.swift` vive en esa subcarpeta y no en la raíz del repositorio, la forma recomendada de integrarlo en otra aplicación es como paquete local. Desde Xcode se añade con "File, Add Package Dependencies, Add Local…" y se selecciona la carpeta `FeatureFlagsKitPackage`. Desde otro paquete Swift, en su `Package.swift` (la ruta es relativa a ese manifiesto):
 
 ```swift
-.package(url: "https://github.com/<tu-usuario>/FeatureFlagsKit.git", from: "1.0.0")
-.package(path: "../FeatureFlagsKitPackage")
+dependencies: [
+    .package(path: "ruta/a/FeatureFlagsKitPackage")
+],
+targets: [
+    .target(
+        name: "MiApp",
+        dependencies: [
+            .product(name: "FeatureFlagsKit", package: "FeatureFlagsKitPackage")
+        ]
+    )
+]
 ```
 
-En un proyecto de Xcode también se puede añadir desde el menú "File, Add Package Dependencies, Add Local".
+Aquí `name` es el nombre del producto (la librería `FeatureFlagsKit`) y `package` es la identidad del paquete, que en una dependencia por ruta coincide con el nombre de la carpeta (`FeatureFlagsKitPackage`). La instalación por URL de repositorio no es posible mientras el `Package.swift` esté en la subcarpeta, ya que SPM lo busca en la raíz del repositorio; para permitirla habría que mover el paquete a la raíz o publicarlo en su propio repositorio.
 
 ## La API pública
 
@@ -188,4 +197,3 @@ La persistencia se hace con `UserDefaults`, que es simple y suficiente para flag
 La caché no caduca por tiempo: una vez guardada, se mantiene hasta la siguiente sincronización.
 
 Cuando se pide un flag con un tipo que no coincide, el SDK devuelve el valor por defecto de ese tipo en lugar de lanzar un error, priorizando la robustez en tiempo de ejecución.
-
