@@ -1,0 +1,1318 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "FeatureFlagsKit",
+    "printedName": "FeatureFlagsKit",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FeatureFlagsKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FeatureFlagsKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FeatureFlagKey",
+        "printedName": "FeatureFlagKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FeatureFlagsKit0A7FlagKeyP8rawValueSSvp",
+            "mangledName": "$s15FeatureFlagsKit0A7FlagKeyP8rawValueSSvp",
+            "moduleName": "FeatureFlagsKit",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FeatureFlagsKit0A7FlagKeyP8rawValueSSvg",
+                "mangledName": "$s15FeatureFlagsKit0A7FlagKeyP8rawValueSSvg",
+                "moduleName": "FeatureFlagsKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : FeatureFlagsKit.FeatureFlagKey>",
+                "sugared_genericSig": "<Self where Self : FeatureFlagsKit.FeatureFlagKey>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:15FeatureFlagsKit0A7FlagKeyP",
+        "mangledName": "$s15FeatureFlagsKit0A7FlagKeyP",
+        "moduleName": "FeatureFlagsKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FeatureFlagsKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FeatureFlagsClient",
+        "printedName": "FeatureFlagsClient",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(remoteProvider:localDefaults:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FeatureFlagsClient",
+                "printedName": "FeatureFlagsKit.FeatureFlagsClient",
+                "usr": "s:15FeatureFlagsKit0aB6ClientC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FeatureFlagsRemoteProvider",
+                "printedName": "any FeatureFlagsKit.FeatureFlagsRemoteProvider",
+                "usr": "s:15FeatureFlagsKit0aB14RemoteProviderP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : FeatureFlagsKit.FeatureFlagValue]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FeatureFlagValue",
+                    "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                    "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15FeatureFlagsKit0aB6ClientC14remoteProvider13localDefaultsAcA0ab6RemoteF0_p_SDySSAA0A9FlagValueOGtcfc",
+            "mangledName": "$s15FeatureFlagsKit0aB6ClientC14remoteProvider13localDefaultsAcA0ab6RemoteF0_p_SDySSAA0A9FlagValueOGtcfc",
+            "moduleName": "FeatureFlagsKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "refresh",
+            "printedName": "refresh()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FeatureFlagsKit0aB6ClientC7refreshyyYaKF",
+            "mangledName": "$s15FeatureFlagsKit0aB6ClientC7refreshyyYaKF",
+            "moduleName": "FeatureFlagsKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "value",
+            "printedName": "value(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FeatureFlagsKit.FeatureFlagValue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FeatureFlagValue",
+                    "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                    "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FeatureFlagsKit0aB6ClientC5value3forAA0A9FlagValueOSgSS_tF",
+            "mangledName": "$s15FeatureFlagsKit0aB6ClientC5value3forAA0A9FlagValueOSgSS_tF",
+            "moduleName": "FeatureFlagsKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "boolValue",
+            "printedName": "boolValue(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FeatureFlagsKit0aB6ClientC9boolValue3forSbSS_tF",
+            "mangledName": "$s15FeatureFlagsKit0aB6ClientC9boolValue3forSbSS_tF",
+            "moduleName": "FeatureFlagsKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "intValue",
+            "printedName": "intValue(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FeatureFlagsKit0aB6ClientC8intValue3forSiSS_tF",
+            "mangledName": "$s15FeatureFlagsKit0aB6ClientC8intValue3forSiSS_tF",
+            "moduleName": "FeatureFlagsKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "doubleValue",
+            "printedName": "doubleValue(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FeatureFlagsKit0aB6ClientC11doubleValue3forSdSS_tF",
+            "mangledName": "$s15FeatureFlagsKit0aB6ClientC11doubleValue3forSdSS_tF",
+            "moduleName": "FeatureFlagsKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stringValue",
+            "printedName": "stringValue(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FeatureFlagsKit0aB6ClientC11stringValue3forS2S_tF",
+            "mangledName": "$s15FeatureFlagsKit0aB6ClientC11stringValue3forS2S_tF",
+            "moduleName": "FeatureFlagsKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "value",
+            "printedName": "value(for:as:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_1?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_1.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FeatureFlagsKit0aB6ClientC5value3for2asq_Sgx_q_mtAA0A7FlagKeyRzr0_lF",
+            "mangledName": "$s15FeatureFlagsKit0aB6ClientC5value3for2asq_Sgx_q_mtAA0A7FlagKeyRzr0_lF",
+            "moduleName": "FeatureFlagsKit",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : FeatureFlagsKit.FeatureFlagKey>",
+            "sugared_genericSig": "<K, T where K : FeatureFlagsKit.FeatureFlagKey>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "value",
+            "printedName": "value(for:as:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FeatureFlagsKit0aB6ClientC5value3for2asxSgSS_xmtlF",
+            "mangledName": "$s15FeatureFlagsKit0aB6ClientC5value3for2asxSgSS_xmtlF",
+            "moduleName": "FeatureFlagsKit",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setOverride",
+            "printedName": "setOverride(_:for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FeatureFlagsKit.FeatureFlagValue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FeatureFlagValue",
+                    "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                    "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FeatureFlagsKit0aB6ClientC11setOverride_3foryAA0A9FlagValueOSg_SStF",
+            "mangledName": "$s15FeatureFlagsKit0aB6ClientC11setOverride_3foryAA0A9FlagValueOSg_SStF",
+            "moduleName": "FeatureFlagsKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearOverrides",
+            "printedName": "clearOverrides()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FeatureFlagsKit0aB6ClientC14clearOverridesyyF",
+            "mangledName": "$s15FeatureFlagsKit0aB6ClientC14clearOverridesyyF",
+            "moduleName": "FeatureFlagsKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "unownedExecutor",
+            "printedName": "unownedExecutor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnownedSerialExecutor",
+                "printedName": "_Concurrency.UnownedSerialExecutor",
+                "usr": "s:Sce"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FeatureFlagsKit0aB6ClientC15unownedExecutorScevp",
+            "mangledName": "$s15FeatureFlagsKit0aB6ClientC15unownedExecutorScevp",
+            "moduleName": "FeatureFlagsKit",
+            "implicit": true,
+            "intro_Macosx": "10.15",
+            "intro_iOS": "13.0",
+            "intro_tvOS": "13.0",
+            "intro_watchOS": "6.0",
+            "declAttributes": [
+              "Available",
+              "Available",
+              "Available",
+              "Available",
+              "Final",
+              "Nonisolated",
+              "Semantics"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UnownedSerialExecutor",
+                    "printedName": "_Concurrency.UnownedSerialExecutor",
+                    "usr": "s:Sce"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FeatureFlagsKit0aB6ClientC15unownedExecutorScevg",
+                "mangledName": "$s15FeatureFlagsKit0aB6ClientC15unownedExecutorScevg",
+                "moduleName": "FeatureFlagsKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:15FeatureFlagsKit0aB6ClientC",
+        "mangledName": "$s15FeatureFlagsKit0aB6ClientC",
+        "moduleName": "FeatureFlagsKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Actor",
+            "printedName": "Actor",
+            "usr": "s:ScA",
+            "mangledName": "$sScA"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FeatureFlagsKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FeatureFlagsError",
+        "printedName": "FeatureFlagsError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "remoteFetchFailed",
+            "printedName": "remoteFetchFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FeatureFlagsKit.FeatureFlagsError.Type) -> (any Swift.Error) -> FeatureFlagsKit.FeatureFlagsError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(any Swift.Error) -> FeatureFlagsKit.FeatureFlagsError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureFlagsError",
+                        "printedName": "FeatureFlagsKit.FeatureFlagsError",
+                        "usr": "s:15FeatureFlagsKit0aB5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(underlying: any Swift.Error)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FeatureFlagsKit.FeatureFlagsError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureFlagsError",
+                        "printedName": "FeatureFlagsKit.FeatureFlagsError",
+                        "usr": "s:15FeatureFlagsKit0aB5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15FeatureFlagsKit0aB5ErrorO17remoteFetchFailedyACs0D0_p_tcACmF",
+            "mangledName": "$s15FeatureFlagsKit0aB5ErrorO17remoteFetchFailedyACs0D0_p_tcACmF",
+            "moduleName": "FeatureFlagsKit",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:15FeatureFlagsKit0aB5ErrorO",
+        "mangledName": "$s15FeatureFlagsKit0aB5ErrorO",
+        "moduleName": "FeatureFlagsKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FeatureFlagsKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FeatureFlagsRemoteProvider",
+        "printedName": "FeatureFlagsRemoteProvider",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "fetchFlags",
+            "printedName": "fetchFlags(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<[Swift.String : FeatureFlagsKit.FeatureFlagValue], any Swift.Error>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<[Swift.String : FeatureFlagsKit.FeatureFlagValue], any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : FeatureFlagsKit.FeatureFlagValue]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "FeatureFlagValue",
+                            "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                            "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FeatureFlagsKit0aB14RemoteProviderP05fetchB010completionyys6ResultOySDySSAA0A9FlagValueOGs5Error_pGYbc_tF",
+            "mangledName": "$s15FeatureFlagsKit0aB14RemoteProviderP05fetchB010completionyys6ResultOySDySSAA0A9FlagValueOGs5Error_pGYbc_tF",
+            "moduleName": "FeatureFlagsKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : FeatureFlagsKit.FeatureFlagsRemoteProvider>",
+            "sugared_genericSig": "<Self where Self : FeatureFlagsKit.FeatureFlagsRemoteProvider>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:15FeatureFlagsKit0aB14RemoteProviderP",
+        "mangledName": "$s15FeatureFlagsKit0aB14RemoteProviderP",
+        "moduleName": "FeatureFlagsKit",
+        "genericSig": "<τ_0_0 : Swift.Sendable>",
+        "sugared_genericSig": "<Self : Swift.Sendable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FeatureFlagsKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FeatureFlagValue",
+        "printedName": "FeatureFlagValue",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "bool",
+            "printedName": "bool",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FeatureFlagsKit.FeatureFlagValue.Type) -> (Swift.Bool) -> FeatureFlagsKit.FeatureFlagValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool) -> FeatureFlagsKit.FeatureFlagValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureFlagValue",
+                        "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                        "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FeatureFlagsKit.FeatureFlagValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureFlagValue",
+                        "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                        "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15FeatureFlagsKit0A9FlagValueO4boolyACSbcACmF",
+            "mangledName": "$s15FeatureFlagsKit0A9FlagValueO4boolyACSbcACmF",
+            "moduleName": "FeatureFlagsKit"
+          },
+          {
+            "kind": "Var",
+            "name": "int",
+            "printedName": "int",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FeatureFlagsKit.FeatureFlagValue.Type) -> (Swift.Int) -> FeatureFlagsKit.FeatureFlagValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> FeatureFlagsKit.FeatureFlagValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureFlagValue",
+                        "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                        "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FeatureFlagsKit.FeatureFlagValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureFlagValue",
+                        "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                        "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15FeatureFlagsKit0A9FlagValueO3intyACSicACmF",
+            "mangledName": "$s15FeatureFlagsKit0A9FlagValueO3intyACSicACmF",
+            "moduleName": "FeatureFlagsKit"
+          },
+          {
+            "kind": "Var",
+            "name": "double",
+            "printedName": "double",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FeatureFlagsKit.FeatureFlagValue.Type) -> (Swift.Double) -> FeatureFlagsKit.FeatureFlagValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> FeatureFlagsKit.FeatureFlagValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureFlagValue",
+                        "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                        "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FeatureFlagsKit.FeatureFlagValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureFlagValue",
+                        "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                        "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15FeatureFlagsKit0A9FlagValueO6doubleyACSdcACmF",
+            "mangledName": "$s15FeatureFlagsKit0A9FlagValueO6doubleyACSdcACmF",
+            "moduleName": "FeatureFlagsKit"
+          },
+          {
+            "kind": "Var",
+            "name": "string",
+            "printedName": "string",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FeatureFlagsKit.FeatureFlagValue.Type) -> (Swift.String) -> FeatureFlagsKit.FeatureFlagValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> FeatureFlagsKit.FeatureFlagValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureFlagValue",
+                        "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                        "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FeatureFlagsKit.FeatureFlagValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureFlagValue",
+                        "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                        "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15FeatureFlagsKit0A9FlagValueO6stringyACSScACmF",
+            "mangledName": "$s15FeatureFlagsKit0A9FlagValueO6stringyACSScACmF",
+            "moduleName": "FeatureFlagsKit"
+          },
+          {
+            "kind": "Var",
+            "name": "codable",
+            "printedName": "codable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FeatureFlagsKit.FeatureFlagValue.Type) -> (Foundation.Data) -> FeatureFlagsKit.FeatureFlagValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.Data) -> FeatureFlagsKit.FeatureFlagValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureFlagValue",
+                        "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                        "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FeatureFlagsKit.FeatureFlagValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureFlagValue",
+                        "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                        "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15FeatureFlagsKit0A9FlagValueO7codableyAC10Foundation4DataVcACmF",
+            "mangledName": "$s15FeatureFlagsKit0A9FlagValueO7codableyAC10Foundation4DataVcACmF",
+            "moduleName": "FeatureFlagsKit"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FeatureFlagValue",
+                "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FeatureFlagValue",
+                "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FeatureFlagsKit0A9FlagValueO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s15FeatureFlagsKit0A9FlagValueO2eeoiySbAC_ACtFZ",
+            "moduleName": "FeatureFlagsKit",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encoding",
+            "printedName": "encoding(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FeatureFlagValue",
+                "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FeatureFlagsKit0A9FlagValueO8encodingyACxKSERzlFZ",
+            "mangledName": "$s15FeatureFlagsKit0A9FlagValueO8encodingyACxKSERzlFZ",
+            "moduleName": "FeatureFlagsKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<T where T : Swift.Encodable>",
+            "static": true,
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FeatureFlagValue",
+                "printedName": "FeatureFlagsKit.FeatureFlagValue",
+                "usr": "s:15FeatureFlagsKit0A9FlagValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15FeatureFlagsKit0A9FlagValueO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s15FeatureFlagsKit0A9FlagValueO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "FeatureFlagsKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FeatureFlagsKit0A9FlagValueO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s15FeatureFlagsKit0A9FlagValueO6encode2toys7Encoder_p_tKF",
+            "moduleName": "FeatureFlagsKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:15FeatureFlagsKit0A9FlagValueO",
+        "mangledName": "$s15FeatureFlagsKit0A9FlagValueO",
+        "moduleName": "FeatureFlagsKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FeatureFlagsKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/joseescudero\/Workspace\/FeatureFlagsKit\/FeatureFlagsKit\/FeatureFlagsKit\/Internal\/LocalFlagDataSource.swift",
+      "kind": "StringLiteral",
+      "offset": 764,
+      "length": 33,
+      "value": "\"com.featureflagskit.cache.flags\""
+    },
+    {
+      "filePath": "\/Users\/joseescudero\/Workspace\/FeatureFlagsKit\/FeatureFlagsKit\/FeatureFlagsKit\/Public\/FeatureFlagsClient.swift",
+      "kind": "Dictionary",
+      "offset": 349,
+      "length": 3,
+      "value": "[]"
+    }
+  ]
+}

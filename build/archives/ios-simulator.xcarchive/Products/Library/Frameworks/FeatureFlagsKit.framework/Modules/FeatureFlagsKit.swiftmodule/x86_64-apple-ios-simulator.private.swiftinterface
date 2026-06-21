@@ -1,0 +1,61 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.4 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
+// swift-module-flags: -target x86_64-apple-ios26.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 6 -enforce-exclusivity=checked -O -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -module-name FeatureFlagsKit
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol FeatureFlagKey {
+  var rawValue: Swift.String { get }
+}
+@_hasMissingDesignatedInitializers public actor FeatureFlagsClient {
+  public init(remoteProvider: any FeatureFlagsKit.FeatureFlagsRemoteProvider, localDefaults: [Swift.String : FeatureFlagsKit.FeatureFlagValue])
+  public func refresh() async throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func value(for key: Swift.String) -> FeatureFlagsKit.FeatureFlagValue?
+  #endif
+  public func boolValue(for key: Swift.String) -> Swift.Bool
+  public func intValue(for key: Swift.String) -> Swift.Int
+  public func doubleValue(for key: Swift.String) -> Swift.Double
+  public func stringValue(for key: Swift.String) -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func value<K, T>(for key: K, as type: T.Type) -> T? where K : FeatureFlagsKit.FeatureFlagKey
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func value<T>(for key: Swift.String, as type: T.Type) -> T?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func setOverride(_ value: FeatureFlagsKit.FeatureFlagValue?, for key: Swift.String)
+  #endif
+  public func clearOverrides()
+  @objc deinit
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  @_semantics("defaultActor") nonisolated final public var unownedExecutor: _Concurrency.UnownedSerialExecutor {
+    get
+  }
+}
+public enum FeatureFlagsError : Swift.Error {
+  case remoteFetchFailed(underlying: any Swift.Error)
+}
+public protocol FeatureFlagsRemoteProvider : Swift.Sendable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func fetchFlags(completion: @escaping @Sendable (Swift.Result<[Swift.String : FeatureFlagsKit.FeatureFlagValue], any Swift.Error>) -> Swift.Void)
+  #endif
+}
+public enum FeatureFlagValue : Swift.Equatable, Swift.Sendable {
+  case bool(Swift.Bool)
+  case int(Swift.Int)
+  case double(Swift.Double)
+  case string(Swift.String)
+  case codable(Foundation.Data)
+  public static func == (a: FeatureFlagsKit.FeatureFlagValue, b: FeatureFlagsKit.FeatureFlagValue) -> Swift.Bool
+}
+extension FeatureFlagsKit.FeatureFlagValue {
+  public static func encoding<T>(_ value: T) throws -> FeatureFlagsKit.FeatureFlagValue where T : Swift.Encodable
+}
+extension FeatureFlagsKit.FeatureFlagValue : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
