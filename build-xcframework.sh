@@ -43,4 +43,4 @@ xcodebuild -create-xcframework \
     -framework "${ARCHIVE_DIR}/ios-simulator.xcarchive/Products/Library/Frameworks/FeatureFlagsKit.framework" \
     -output "${OUTPUT}"
 
-echo "✅ Generado: ${OUTPUT}"
+echo "Generado: ${OUTPUT}"
