@@ -17,7 +17,7 @@ swift test       # ejecuta la suite (Swift Testing)
 
 ```swift
 // Remoto
-.package(url: "https://github.com/<tu-usuario>/FeatureFlagsKit.git", from: "1.0.0")
+.package(url: "https://github.com/Jose-Escudero1/smadex-challenge.git", from: "1.0.0")
 
 // Local
 .package(path: "../FeatureFlagsKitPackage")
